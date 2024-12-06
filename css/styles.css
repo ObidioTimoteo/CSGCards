@@ -1,0 +1,74 @@
+/* Estilo del Header */
+.menu-header {
+    text-align: center; /* Centra el texto horizontalmente */
+    font-family: 'Montserrat', sans-serif; /* Fuente elegante */
+    font-size: 24px; /* Tamaño del texto */
+    font-weight: bold; /* Texto en negrita */
+    color: white; /* Color del texto */
+    background-color: black; /* Fondo negro */
+    padding: 10px 0; /* Espaciado arriba y abajo */
+    margin: 20px;
+    border-top: 2px solid white; /* Línea blanca arriba */
+    border-bottom: 2px solid white; /* Línea blanca abajo */
+}
+
+/* General Body Style */
+body {
+    background-color: rgb(43, 35, 35);
+    margin: 0;
+    padding: 0;    
+}
+
+/* Contenedor de las cartas */
+.cartas {
+    display: flex; /* Activamos el contenedor flex */
+    flex-direction: row; /* Los elementos se distribuyen en una fila horizontal */
+    justify-content: space-around; /* Espacio igual entre elementos y extremos */
+    flex-wrap: wrap; /* Permite que las cartas pasen a una nueva fila si no caben */
+    gap: 20px; /* Espacio entre cartas */
+    padding: 50px;
+}
+
+/* Contenedor Individual de Cada Carta */
+.carta-container {
+    display: flex;
+    flex-direction: column; /* Elementos en una columna (texto, imagen, botón) */
+    align-items: flex-end; /* Alinea todos los elementos a la derecha del contenedor */
+    width: 300px; /* Cada carta ocupa 300px */
+    background-color: #2e2a2a; /* Fondo oscuro para resaltar cada carta */
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(231, 85, 85, 0.5);
+}
+
+/* Texto de la Carta */
+.carta-container h1 {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+}
+
+/* Imagen de la Carta */
+.carta {
+    width: 100%; /* Se adapta al ancho del contenedor */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+/* Botón de Cambio de Variantes */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}

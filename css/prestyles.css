@@ -1,0 +1,54 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;       
+	background-color: black;    
+}
+
+/* Contenedor principal de cartas */
+.cartas {
+    display: grid; /* Activar Grid Layout */
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    gap: 20px; /* Espaciado entre cartas */
+    padding: 20px;
+}
+
+/* Contenedor Individual de cartas */
+.carta-container {
+    display: flex;
+    flex-direction: column; /* Elementos en una columna (texto, imagen, botón) */
+    align-items: center; /* Centra los elementos dentro de cada carta */
+    background-color: #1e1e1e; /* Fondo oscuro para resaltar cada carta */
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(201, 26, 26, 0.5);
+}
+
+/* Imagen de la carta */
+.carta {
+    width: 100px !important; /* Se adapta al ancho del contenedor */
+    height: 150px !important; /* Mantiene la proporción */
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+h1 {
+    margin: 0 0 5px 0; /* Espaciado entre el texto y la imagen */
+	color: white;
+	font-size: 16px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    font-size: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
