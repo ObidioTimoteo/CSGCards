@@ -1,3 +1,9 @@
+
+
+
+
+/* Botón para cambiar de modelo de carta:
+
 $(document).ready(function () {
     // Variantes de cartas organizadas por cada carta
     const variantes = [
@@ -42,3 +48,5 @@ $(document).ready(function () {
         });
     });
 });
+
+*/

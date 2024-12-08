@@ -5,34 +5,131 @@
         <title>CSGCards</title>
         <link rel="stylesheet" href="css/styles.css">  <!-- Vinculamos el archivo CSS -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  <!-- Vinculamos jQuery -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Agregamos Font Awesome para los iconos -->
     </head>
-    <header class="menu-header">       
-        MENU
+    <header class="header">       
+        <!-- Fila Superior: Logo y Carrito -->
+    <div class="top-bar">
+        <div class="logo">CSGCards</div>
+        <div class="actions">
+            <a href="#" class="cart-icon">
+                <i class="fa fa-shopping-cart"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Fila Inferior: Menú de Navegación -->
+    <nav class="menu">
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li>
+                <a href="#">CARDS ↓</a>
+                <ul class="dropdown">
+                    <li><a href="#">STAR WARS</a></li>
+                    <li><a href="#">MARVEL</a></li>
+                    <li><a href="#">POKÉMON</a></li>
+                </ul>
+            </li>
+            <li><a href="#">SHOP</a></li>
+            <li><a href="#">NEWS</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </nav>
     </header>
     <body>
-        <!-- Aquí pruebo a hacer mi segundo cambio -->
         <div class="cartas">
             <div class="carta-container">
                 <h1>1 - Ahsoka Tano</h1> <!-- Texto arriba -->
-                <img class="carta" src="images/starwars/2024Chrome/001_Ahsoka_Tano_RR.jpeg" alt="Rainbow Refractor Card Ahsoka Tano" /> <!-- Imagen centrada -->
-                <button class="cambiarTipoCarta">Ver versiones</button> <!-- Botón abajo -->
+                <div class="imagen-container">
+                    <img class="carta" src="images/starwars/2024Chrome/001_Ahsoka_Tano_RR.jpeg" alt="Rainbow Refractor Card Ahsoka Tano" /> <!-- Imagen centrada -->
+                </div>                
+                <button class="carrito">
+                    <i class="fas fa-shopping-cart"></i>
+                </button> <!-- Botón abajo -->
             </div>
             <div class="carta-container">
                 <h1>3 - Sabine Wren</h1> <!-- Texto arriba -->
-                <img class="carta" src="images/starwars/2024Chrome/003_Sabine_Wren_RR.jpeg" alt="Rainbow Refractor Card Sabine Wren" /> <!-- Imagen centrada -->
-                <button class="cambiarTipoCarta">Ver versiones</button> <!-- Botón abajo -->
+                <div class="imagen-container">
+                    <img class="carta" src="images/starwars/2024Chrome/003_Sabine_Wren_RR.jpeg" alt="Rainbow Refractor Card Sabine Wren" /> <!-- Imagen centrada -->
+                </div>
+                <button class="carrito">
+                    <i class="fas fa-shopping-cart"></i>
+                </button> <!-- Botón abajo -->
             </div>
             <div class="carta-container">
                 <h1>9 - Luthen Rael</h1> <!-- Texto arriba -->
-                <img class="carta" src="images/starwars/2024Chrome/009_Luthen_Rael_BASE.png" alt="Base Card Luthen Rael" /> <!-- Imagen centrada -->
-                <button class="cambiarTipoCarta">Ver versiones</button> <!-- Botón abajo -->
+                <div class="imagen-container">
+                    <img class="carta" src="images/starwars/2024Chrome/009_Luthen_Rael_BASE.png" alt="Base Card Luthen Rael" /> <!-- Imagen centrada -->
+                </div>                 
+                <button class="carrito">
+                    <i class="fas fa-shopping-cart"></i>
+                </button> <!-- Botón abajo -->
             </div>
             <div class="carta-container">
                 <h1>22 - Grogu</h1> <!-- Texto arriba -->
-                <img class="carta" src="images/starwars/2024Chrome/022_Grogu_BBPR.jpeg" alt="Blue Blaster Pulsar Refractor Card Grogu" /> <!-- Imagen centrada -->
-                <button class="cambiarTipoCarta">Ver versiones</button> <!-- Botón abajo -->
-            </div>            
+                <div class="imagen-container">
+                    <img class="carta" src="images/starwars/2024Chrome/022_Grogu_BBPR.jpeg" alt="Blue Blaster Pulsar Refractor Card Grogu" /> <!-- Imagen centrada -->
+                </div>                
+                <button class="carrito">
+                    <i class="fas fa-shopping-cart"></i>
+                </button> <!-- Botón abajo -->
+            </div>
+            <div class="carta-container">
+                <h1>6 - Shin Hati</h1> <!-- Texto arriba -->
+                <div class="imagen-container">
+                    <img class="carta" src="images/starwars/2024Chrome/006_Shin_Hati_BASE.jpg" alt="Blue Blaster Pulsar Refractor Card Grogu" /> <!-- Imagen centrada -->
+                </div>                
+                <button class="carrito">
+                    <i class="fas fa-shopping-cart"></i>
+                </button> <!-- Botón abajo -->
+            </div>
+            <div class="carta-container">
+                <h1>42 - Mayfeld</h1> <!-- Texto arriba -->
+                <div class="imagen-container">
+                    <img class="carta" src="images/starwars/2024Chrome/042_Mayfeld_HV.jpg" alt="Blue Blaster Pulsar Refractor Card Grogu" /> <!-- Imagen centrada -->
+                </div>                
+                <button class="carrito">
+                    <i class="fas fa-shopping-cart"></i>
+                </button> <!-- Botón abajo -->
+            </div>
+            <div class="carta-container">
+                <h1>Padme Amidala GEAR</h1> <!-- Texto arriba -->
+                <div class="imagen-container">
+                    <img class="carta" src="images/starwars/2024Chrome/GG_Padme_Amidala.jpg" alt="Blue Blaster Pulsar Refractor Card Grogu" /> <!-- Imagen centrada -->
+                </div>                
+                <button class="carrito">
+                    <i class="fas fa-shopping-cart"></i>
+                </button> <!-- Botón abajo -->
+            </div>
+            <div class="carta-container">
+                <h1>Reflections 001</h1> <!-- Texto arriba -->
+                <div class="imagen-container">
+                    <img class="carta" src="images/starwars/2024Chrome/Reflections_001.jpg" alt="Blue Blaster Pulsar Refractor Card Grogu" /> <!-- Imagen centrada -->
+                </div>                
+                <button class="carrito">
+                    <i class="fas fa-shopping-cart"></i>
+                </button> <!-- Botón abajo -->
+            </div>
+             
+            
+
+
+
         </div>
         <script src="js/script.js"></script>  <!-- Vinculamos el archivo JS -->
     </body>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Mi Colección de Cartas. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <a href="#">Política de privacidad</a>
+                <a href="#">Términos y condiciones</a>
+                <a href="#">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+
 </html>

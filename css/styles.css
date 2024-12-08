@@ -1,20 +1,120 @@
-/* Estilo del Header */
-.menu-header {
-    text-align: center; /* Centra el texto horizontalmente */
-    font-family: 'Montserrat', sans-serif; /* Fuente elegante */
-    font-size: 24px; /* Tamaño del texto */
-    font-weight: bold; /* Texto en negrita */
-    color: white; /* Color del texto */
-    background-color: black; /* Fondo negro */
-    padding: 10px 0; /* Espaciado arriba y abajo */
-    margin: 20px;
-    border-top: 2px solid white; /* Línea blanca arriba */
-    border-bottom: 2px solid white; /* Línea blanca abajo */
+/* General Header */
+.header {
+    width: 100%;    
+    color: white;    
 }
+
+/* Fila Superior */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 200px;
+    background-color: #000000;
+}
+
+/* Logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e75a5a;
+    margin-left: 30px;
+}
+
+/* Carrito de Compras */
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.cart-icon {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    margin-right: 30px;
+    transition: color 0.3s ease;
+}
+
+.cart-icon:hover {
+    color: #e75a5a;
+}
+
+/* Menú de Navegación */
+.menu {
+    background-color: #333;
+    margin-bottom: 30px;
+    padding: 20px 180px; 
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0; /* Elimina el margen que genera espacio adicional */
+    padding: 10px 50px; /* Ajusta el padding para espaciar internamente */
+    gap: 20px; /* Separar los distintos elementos entre sí */
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #e75a5a;
+    color: white;    
+}
+
+/* Dropdown Menú (Menús Desplegables) */
+.menu li {
+    position: relative;
+}
+
+.menu li ul {
+    display: none;
+    position: absolute;
+    top: 100%; /* Aparece justo debajo del menú principal */
+    left: 0;
+    background-color: #444;
+    margin-top: 10px;
+    padding: 10px 0;
+    list-style: none;
+    min-width: 200px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.menu li:hover ul {
+    display: block;
+}
+
+.menu li ul li {
+    padding: 5px 15px;
+}
+
+.menu li ul li a {
+    padding: 5px 15px;
+    display: block;
+    color: white;
+}
+
+.menu li ul li a:hover {
+    background-color: #e75a5a;
+    border-radius: 5px;
+}
+
+
+
+
 
 /* General Body Style */
 body {
-    background-color: rgb(43, 35, 35);
+    background-color: rgb(255, 255, 255);
     margin: 0;
     padding: 0;    
 }
@@ -26,49 +126,112 @@ body {
     justify-content: space-around; /* Espacio igual entre elementos y extremos */
     flex-wrap: wrap; /* Permite que las cartas pasen a una nueva fila si no caben */
     gap: 20px; /* Espacio entre cartas */
-    padding: 50px;
+    margin: 0 200px;
 }
 
-/* Contenedor Individual de Cada Carta */
-.carta-container {
+/* Contenedor Individual de cada carta */
+.carta-container {    
     display: flex;
     flex-direction: column; /* Elementos en una columna (texto, imagen, botón) */
-    align-items: flex-end; /* Alinea todos los elementos a la derecha del contenedor */
+    align-items: flex-end; /* Alinea todos los elementos al centro */
     width: 300px; /* Cada carta ocupa 300px */
     background-color: #2e2a2a; /* Fondo oscuro para resaltar cada carta */
     border-radius: 10px;
-    padding: 10px;
+    padding: 20px;
     box-shadow: 0px 4px 6px rgba(231, 85, 85, 0.5);
 }
 
 /* Texto de la Carta */
 .carta-container h1 {
-    margin: 0;
+    margin: 10px;
     font-family: 'Montserrat', sans-serif;
     color: rgb(255, 255, 255);
-    font-size: 16px;
+    font-size: 16px;    
+}
+
+/* Contenedor de la imagen de la carta */
+.carta-container .imagen-container {
+    overflow: hidden; /* Oculta el desbordamiento de la imagen al hacer zoom */
+    background-color: #2e2a2a; /* Fondo oscuro para resaltar cada carta */
+    border-radius: 10px;
+    padding: 0px;
+    margin: 5px;    
 }
 
 /* Imagen de la Carta */
-.carta {
+.carta-container .imagen-container .carta {
     width: 100%; /* Se adapta al ancho del contenedor */
     height: auto; /* Mantiene la proporción */
-    border-radius: 5px;
-    margin: 10px 0;
+    border-radius: 5px;    
+    transition: transform 0.5s ease; /* Aplica una transformación suave al hacer hover */
+    display: block; /* Esto hace que la imagen no ocupe todo el ancho disponible y quede centrada */
+    margin-left: auto; /* Asegura que la imagen quede centrada */
+    margin-right: auto; /* Asegura que la imagen quede centrada */
+}
+
+.carta:hover {
+    transform: scale(1.10); /* Aplica un zoom del 10% cuando pasamos el ratón sobre el contenedor de la carta */
 }
 
 /* Botón de Cambio de Variantes */
-button {
+.carrito {
     background-color: #4CAF50;
     color: white;
     padding: 10px;
-    font-size: 12px;
+    font-size: 10px;
+    margin: 10px;
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    
+}
+
+.carrito:hover {
+    background-color: #c8239c;
     transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #45a049;
+/* Icono del carrito dentro del botón */
+.carrito i {
+    font-size: 20px; /* Tamaño del ícono */
+}
+
+.carrito:hover i {
+    color: black;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Footer General */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px; /* Un poco de espacio sobre el footer */
+}
+
+/* Contenido del Footer */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Enlaces del Footer */
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: white;
+    margin: 0 15px;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #e75a5a;
 }
